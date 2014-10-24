@@ -9,8 +9,14 @@ var observer = new MutationObserver(function (mutations) {
 	var name = story.querySelector('.story.name textarea').value;
 	var id = story.dataset.id;
 
+	var isDisabled = 'inline-block';
+
+	if (id === "") {
+		isDisabled = 'none';
+	}
 	var button = document.createElement('button');
 	button.type = 'button';
+	button.style.display = isDisabled;
 	button.classList.add('clipboard_button', 'casenine_button');
 	button.dataset.clipboardText = name + ' [Delivers #' + id + ']';
 	button.innerHTML = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 28 28">' 
