@@ -9,7 +9,8 @@
   },
   "content_scripts": [ {
     "js": ["background.js"],
-    "matches": ["https://www.pivotaltracker.com/*"]
+    "matches": ["https://www.pivotaltracker.com/*"],
+    "css": ["style.css"]
   }],
   "permissions": [
     "clipboardWrite"
