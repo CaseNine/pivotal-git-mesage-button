@@ -1,15 +1,22 @@
 {
   "name": "Pivotal github commit message generator",
-  "version": "1", "manifest_version": 2,
+  "version": "1", 
+  "manifest_version": 2,
   "description": "Generate a github commit message from pivotal",
-  "background_page": "background.html",
-  "browser_action": {
-    "name": "Pivotal github commit",
-    "icons": ["favicon1.png"],
-    "default_icon": "favicon1.png"
+  "page_action": {
+    "default_title": "Pivotal github commit",
+    "default_icon": "custom_logo.png"
   },
   "content_scripts": [ {
-    "js": [ "jquery.min.js", "background.js"],
+    "js": ["background.js"],
     "matches": ["https://www.pivotaltracker.com/*"]
-  }]
+  }],
+  "permissions": [
+    "clipboardWrite"
+  ],
+  "icons": {
+    "128": "custom_logo_128.png",
+    "48": "custom_logo_48.png",
+    "16": "custom_logo_16.png"
+  }
 }
