@@ -1,0 +1,15 @@
+{
+  "name": "Pivotal github commit message generator",
+  "version": "1", "manifest_version": 2,
+  "description": "Generate a github commit message from pivotal",
+  "background_page": "background.html",
+  "browser_action": {
+    "name": "Pivotal github commit",
+    "icons": ["favicon1.png"],
+    "default_icon": "favicon1.png"
+  },
+  "content_scripts": [ {
+    "js": [ "jquery.min.js", "background.js"],
+    "matches": ["https://www.pivotaltracker.com/*"]
+  }]
+}
