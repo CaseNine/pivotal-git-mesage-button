@@ -5,3 +5,13 @@ button.clipboard_button.hover path {
 .casenine_button {
 	padding: 2px;
 }
+
+section.model_details .story .persistence.has_flash .close {
+	width: 92px!important;
+}
+
+section.model_details .persistence {
+	clear: both;
+	position: absolute;
+	right: 0;
+}
